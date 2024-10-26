@@ -14,7 +14,6 @@ typedef struct philos
 	int m_count;
 	long long last_meal;
 	p_info *infos;
-
 	pthread_mutex_t	fork_r;
 	pthread_mutex_t	*fork_l;
 }	t_philo;
@@ -29,13 +28,17 @@ typedef struct info{
 	int flag;
 	int dead;
 	int meals;
+	int died_philo;
+	long long time_of_death;
+	pthread_mutex_t dead_lock;
 	pthread_mutex_t meal_eaten;
 	pthread_mutex_t print_lock;
 	t_philo *philos;
 
 }	p_info;
-void	print_message(char *str, int id, pthread_mutex_t *print_lock, long long start);
+void	print_message(char *str, int id, pthread_mutex_t *print_lock, long long start,t_philo *arg);
 void ft_parse(int ac, char **values,p_info *ph);
 long long get_time();
-
+int death_check(t_philo *arg);
+int	ft_usleep(size_t time);
 #endif 

@@ -6,12 +6,11 @@
 /*   By: ael-moua <ael-moua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 03:47:59 by ael-moua          #+#    #+#             */
-/*   Updated: 2024/08/29 17:39:46 by ael-moua         ###   ########.fr       */
+/*   Updated: 2024/10/24 18:09:39 by ael-moua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "philosphers.h"
-
 
 int	ft_atoi(const char *str)
 {
@@ -55,11 +54,8 @@ void ft_parse(int ac, char **values,p_info *ph)
 		ph->eat_cond = ft_atoi(values[5]);
 		if (ph ->eat_cond < 0)
 			ph->flag = -1;
-		else
-			pthread_mutex_init(&(ph->meal_eaten),NULL);
 	}
 	else 
 		ph->eat_cond = -1;
-pthread_mutex_init(&(ph->print_lock),NULL);
 	ph->dead = 1;
 }
