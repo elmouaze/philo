@@ -6,7 +6,7 @@
 /*   By: ael-moua <ael-moua@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/26 03:47:59 by ael-moua          #+#    #+#             */
-/*   Updated: 2024/10/24 18:09:39 by ael-moua         ###   ########.fr       */
+/*   Updated: 2024/10/29 09:05:30 by ael-moua         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void ft_parse(int ac, char **values,p_info *ph)
 	ph->tt_die = ft_atoi(values[2]);
 	ph->tt_eat = ft_atoi(values[3]);
 	ph->tt_sleep = ft_atoi(values[4]);
+	ph->meals = 0;
 	if (ph->philos < 0 || ph->tt_die  < 0
 		|| ph->tt_eat < 0  || ph->tt_sleep < 0)
 			ph->flag = -1;
@@ -57,5 +58,6 @@ void ft_parse(int ac, char **values,p_info *ph)
 	}
 	else 
 		ph->eat_cond = -1;
-	ph->dead = 1;
+	ph->dead = 0;
+	ph->meals = 0;
 }

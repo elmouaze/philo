@@ -3,6 +3,8 @@
         "__locale": "c",
         "locale": "c",
         "sstream": "c",
-        "chrono": "c"
+        "chrono": "c",
+        "philosphers.h": "c",
+        "time.h": "c"
     }
 }
