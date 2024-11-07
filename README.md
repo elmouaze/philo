@@ -44,7 +44,7 @@ Philosophers must not run into data races or deadlocks, and must respect the tim
 To get started with the project, clone this repository to your local machine:
 
 ```bash
-git clone https://github.com/yourusername/philosophers.git
+git clone https://github.com/elmouaze/philo
 cd philosophers
 ```
 
@@ -89,11 +89,13 @@ This will simulate 5 philosophers, with a 800ms death timeout, 200ms for eating 
 ## Project Structure
 
 ```
-philosophers/
+philo/
 │
 ├── Makefile               # Makefile to compile the project
-├── philo.c                # Main C file containing the program logic
-├── philo.h                # Header file containing declarations
+├── philo.c                # Main file containing the program logic
+├── philo.h                # Header file containing function declarations and macros
+├── routine.c              # Contains the routines for philosopher actions (eating, thinking, sleeping)
+├── utils.c                # Helper functions (e.g., time management, logging, etc.)
 └── README.md              # Project documentation
 ```
 
